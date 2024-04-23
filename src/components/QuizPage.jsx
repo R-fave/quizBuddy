@@ -46,11 +46,11 @@ const QuizPage = ({data}) => {
       </div>
 
       {curQues === data.length - 1 ? 
-      (<button className=" border border-gray-300 p-3 text-2xl font-medium  my-2 rounded-md" onClick={finishQuiz}>Finish Quiz</button>): 
-      (<button className=" border border-gray-300 p-3 text-2xl font-medium  my-2 rounded-md" onClick={nextQuestion}>Next Question</button> )
+      (<button className=" border border-gray-300 p-3 text-2xl font-medium  my-2 rounded-md active:bg-red-300" onClick={finishQuiz}>Finish Quiz</button>): 
+      (<button className=" border border-gray-300 p-3 text-2xl font-medium  my-2 rounded-md active:bg-red-300" onClick={nextQuestion}>Next Question</button> )
       }
 
-      {curQues >= 1 && (<button className=" border border-gray-300 p-3 text-2xl font-medium rounded-md active:bg-red-400" onClick={prevQuestion}>Perv Question</button>)  }
+      {curQues >= 1 && (<button className=" border border-gray-300 p-3 text-2xl font-medium rounded-md active:bg-red-300" onClick={prevQuestion}>Perv Question</button>)  }
       
       
     </div>
