@@ -18,8 +18,6 @@ function App() {
     }).catch((err) => {
       console.log("401 Error")
     });
-
-    
   },[(genQues === "gen")])
 
  const data = quizData.map((data)=>{
@@ -38,11 +36,6 @@ function App() {
     }
     return (newData)
   })
-
-
-
-
-
 
   return (
     <div style={{backgroundImage:'url("../intro-page.jpg")'}} className=' bg-cover flex justify-center flex-col items-center h-screen w-screen'>
