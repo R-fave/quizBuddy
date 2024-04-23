@@ -39,7 +39,7 @@ function App() {
 
   return (
     <div style={{backgroundImage:'url("../intro-page.jpg")'}} className=' bg-cover flex justify-center flex-col items-center h-screen w-screen'>
-      <h1 className=' text-5xl font-bold mb-2 mt-5'>QuizBuddy</h1>
+      <h1 className=' text-5xl font-bold mb-2 mt-5 max-lg:text-3xl'>QuizBuddy</h1>
 
       <QuizContext.Provider value={{quizState, setQuizState, score, setScore, setGenQues, genQues}}>
         {quizState === "Start" && <StartPage/>}
