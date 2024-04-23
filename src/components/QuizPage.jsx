@@ -39,18 +39,18 @@ const QuizPage = ({data}) => {
       <p>Question {curQues+1} of 10</p>
       <h1 className=" text-2xl font-semibold">{data[curQues].propmt}</h1>
       <div className=" flex flex-col w-auto gap-3  my-5">
-        <button className={` border border-gray-300 mr-2 p-2 hover:bg-green-100 ${optionChoosen === data[curQues].optionA ? "bg-green-300 hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionA)}} >{data[curQues].optionA}</button>
-        <button className={`border border-gray-300 mr-2 p-2 hover:bg-green-100 ${optionChoosen === data[curQues].optionB ? "bg-green-300  hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionB)}}>{data[curQues].optionB}</button>
-        <button className={`border border-gray-300 mr-2 p-2 hover:bg-green-100 ${optionChoosen === data[curQues].optionC ? "bg-green-300  hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionC)}}>{data[curQues].optionC}</button>
-        <button className={`border border-gray-300 p-2 hover:bg-green-100 ${optionChoosen === data[curQues].optionD ? "bg-green-300  hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionD)}}>{data[curQues].optionD}</button>
+        <button className={` border border-gray-300 mr-2 p-2 hover:bg-green-100 rounded-md ${optionChoosen === data[curQues].optionA ? "bg-green-300 hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionA)}} >{data[curQues].optionA}</button>
+        <button className={`border border-gray-300 mr-2 p-2 hover:bg-green-100 rounded-md ${optionChoosen === data[curQues].optionB ? "bg-green-300  hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionB)}}>{data[curQues].optionB}</button>
+        <button className={`border border-gray-300 mr-2 p-2 hover:bg-green-100 rounded-md ${optionChoosen === data[curQues].optionC ? "bg-green-300  hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionC)}}>{data[curQues].optionC}</button>
+        <button className={`border border-gray-300 p-2 hover:bg-green-100 rounded-md ${optionChoosen === data[curQues].optionD ? "bg-green-300  hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionD)}}>{data[curQues].optionD}</button>
       </div>
 
       {curQues === data.length - 1 ? 
-      (<button className=" border border-gray-300 p-3 text-2xl font-medium hover:bg-red-300 my-2" onClick={finishQuiz}>Finish Quiz</button>): 
-      (<button className=" border border-gray-300 p-3 text-2xl font-medium hover:bg-red-300 my-2" onClick={nextQuestion}>Next Question</button> )
+      (<button className=" border border-gray-300 p-3 text-2xl font-medium hover:bg-red-300 my-2 rounded-md" onClick={finishQuiz}>Finish Quiz</button>): 
+      (<button className=" border border-gray-300 p-3 text-2xl font-medium hover:bg-red-300 my-2 rounded-md" onClick={nextQuestion}>Next Question</button> )
       }
 
-      {curQues >= 1 && (<button className=" border border-gray-300 p-3 text-2xl font-medium hover:bg-red-300" onClick={prevQuestion}>Perv Question</button>)  }
+      {curQues >= 1 && (<button className=" border border-gray-300 p-3 text-2xl font-medium rounded-md hover:bg-red-300" onClick={prevQuestion}>Perv Question</button>)  }
       
       
     </div>
