@@ -35,7 +35,7 @@ const QuizPage = ({data}) => {
   }
 
   return (
-    <div className=" flex w-full h-full max-lg:w-[70%] flex-col justify-center lg:w-[40%] md:w-[60%]">
+    <div className=" flex w-full h-full max-lg:w-[70%] flex-col justify-center lg:w-[40%] md:w-[60%] max-lg:mt-[-3rem]">
       <p>Question {curQues+1} of 10</p>
       <h1 className=" text-2xl font-semibold max-lg:text-lg">{data[curQues].propmt}</h1>
       <div className=" flex flex-col w-auto gap-3  my-5 max-lg:gap-2">
