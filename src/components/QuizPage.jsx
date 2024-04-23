@@ -37,8 +37,8 @@ const QuizPage = ({data}) => {
   return (
     <div className=" flex w-full h-full max-lg:w-[70%] flex-col justify-center lg:w-[40%] md:w-[60%]">
       <p>Question {curQues+1} of 10</p>
-      <h1 className=" text-2xl font-semibold">{data[curQues].propmt}</h1>
-      <div className=" flex flex-col w-auto gap-3  my-5">
+      <h1 className=" text-2xl font-semibold max-lg:text-lg">{data[curQues].propmt}</h1>
+      <div className=" flex flex-col w-auto gap-3  my-5 max-lg:gap-2">
         <button className={` border border-gray-300 mr-2 p-2 hover:bg-green-100 rounded-md ${optionChoosen === data[curQues].optionA ? "bg-green-300 hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionA)}} >{data[curQues].optionA}</button>
         <button className={`border border-gray-300 mr-2 p-2 hover:bg-green-100 rounded-md ${optionChoosen === data[curQues].optionB ? "bg-green-300  hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionB)}}>{data[curQues].optionB}</button>
         <button className={`border border-gray-300 mr-2 p-2 hover:bg-green-100 rounded-md ${optionChoosen === data[curQues].optionC ? "bg-green-300  hover:bg-green-300" : "bg-transparent"}`} onClick={()=>{chooseOption(data[curQues].optionC)}}>{data[curQues].optionC}</button>
@@ -46,11 +46,11 @@ const QuizPage = ({data}) => {
       </div>
 
       {curQues === data.length - 1 ? 
-      (<button className=" border border-gray-300 p-3 text-2xl font-medium  my-2 rounded-md active:bg-red-300" onClick={finishQuiz}>Finish Quiz</button>): 
-      (<button className=" border border-gray-300 p-3 text-2xl font-medium  my-2 rounded-md active:bg-red-300" onClick={nextQuestion}>Next Question</button> )
+      (<button className=" border border-gray-300 p-3 text-2xl font-medium  my-2 rounded-md active:bg-red-300 max-lg:text-xl max-lg:p-[0.5rem]" onClick={finishQuiz}>Finish Quiz</button>): 
+      (<button className=" border border-gray-300 p-3 text-2xl font-medium  my-2 rounded-md active:bg-red-300 max-lg:text-xl max-lg:p-[0.5rem]" onClick={nextQuestion}>Next Question</button> )
       }
 
-      {curQues >= 1 && (<button className=" border border-gray-300 p-3 text-2xl font-medium rounded-md active:bg-red-300" onClick={prevQuestion}>Perv Question</button>)  }
+      {curQues >= 1 && (<button className=" border border-gray-300 p-3 text-2xl font-medium rounded-md active:bg-red-300 max-lg:text-xl max-lg:p-[0.5rem]" onClick={prevQuestion}>Perv Question</button>)  }
       
       
     </div>
